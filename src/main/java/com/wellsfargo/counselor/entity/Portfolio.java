@@ -9,11 +9,7 @@ public class Portfolio {
     private long portfolioId;
 
    @ManyToOne
-    @JoinColumn(name = "clientId")
     private Client client;
-
-   @OneToMany(mappedBy = "portfolio")
-   private Security security;
 
    @Column(nullable = false)
     private long creationDate;

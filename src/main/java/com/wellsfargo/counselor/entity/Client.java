@@ -9,11 +9,8 @@ public class Client {
     private long clientId;
 
     @ManyToOne
-    @JoinColumn(name = "advisorId")
     private Advisor advisor;
 
-    @OneToMany(mappedBy = "client")
-    private Portfolio portfolio;
 
     @Column(nullable = false)
     private String firstName;
@@ -53,14 +50,6 @@ public class Client {
 
     public void setAdvisor(Advisor advisor) {
         this.advisor = advisor;
-    }
-
-    public Portfolio getPortfolio() {
-        return portfolio;
-    }
-
-    public void setPortfolio(Portfolio portfolio) {
-        this.portfolio = portfolio;
     }
 
     public String getFirstName() {

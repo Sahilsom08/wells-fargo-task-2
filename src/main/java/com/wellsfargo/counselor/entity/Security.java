@@ -8,7 +8,7 @@ public class Security {
     @GeneratedValue
     private long securityId;
 
-    @JoinColumn(name = "portfolioId")
+    @ManyToOne
     private Portfolio portfolio;
 
     public long getSecurityId() {
@@ -28,7 +28,7 @@ public class Security {
     private String purChaseDate;
 
     @Column(nullable = false)
-    private long quantity;
+    private float quantity;
 
     public String getName() {
         return name;
@@ -79,7 +79,7 @@ public class Security {
         this.purChaseDate = purChaseDate;
     }
 
-    public long getQuantity() {
+    public float getQuantity() {
         return quantity;
     }
 
